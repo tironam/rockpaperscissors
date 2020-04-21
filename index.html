@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+</head>
+<body>
+        <script>
+        let wins = 0
+        let losses = 0
+        let ties = 0
+        let choices = ['r', 'p', 's']
+
+        for (let i = 0; i < 10; i++) {
+
+        let userChoice = prompt('r p s')
+        let computerChoice 
+        computerChoice = choices[Math.floor(Math.random() * choices.length)]
+
+                switch(userChoice) {
+                        case 'r':
+                        if (computerChoice === 'p') {
+                                losses++
+                                alert(`computer chose ${computerChoice}`)
+                                alert(`your losses = ${losses}`)
+                        } else if (computerChoice === 's') {
+                                wins++
+                                alert(`computer chose ${computerChoice}`)
+                                alert(`your wins = ${wins}`)
+                        } else {
+                                console.log(userChoice, computerChoice)
+                                ties++
+                                alert(`computer chose ${computerChoice}`)
+                                alert(`your ties = ${ties}`)
+                        }
+                        break;
+
+                        case 'p':
+                                if (computerChoice === 's') {
+                                        losses++
+                                        alert(`computer chose ${computerChoice}`)
+                                        alert(`your losses = ${losses}`)
+                                } else if (computerChoice === 'r') {
+                                        wins++
+                                        alert(`computer chose ${computerChoice}`)
+                                        alert(`your wins = ${wins}`)
+                                } else {
+                                        console.log(userChoice, computerChoice)
+                                        ties++
+                                        alert(`computer chose ${computerChoice}`)
+                                        alert(`your ties = ${ties}`)
+                                }
+                                break;
+
+                                case 's': 
+                                if (computerChoice === 's') {
+                                        losses++
+                                        alert(`computer chose ${computerChoice}`)
+                                        alert(`your losses = ${losses}`)
+                                } else if (computerChoice === 'r') {
+                                        wins++
+                                        alert(`computer chose ${computerChoice}`)
+                                        alert(`your wins = ${wins}`)
+                                } else {
+                                        console.log(userChoice, computerChoice)
+                                        ties++
+                                        alert(`computer chose ${computerChoice}`)
+                                        alert(`your ties = ${ties}`)
+                                }
+                                break;
+
+                                default: 'You didn\'t pick the right letter'
+                                i--
+                }
+        }
+        // for (let i = 0; i < 10; i++) {
+
+        // let userChoice = prompt('rock, paper, or scissors?')
+        // let computerChoice
+        // let arr = ['rock', 'paper', 'scissors']
+
+        // let randomNumber = Math.floor(Math.random() * 3)
+        // computerChoice = arr[randomNumber]
+        
+        // if (userChoice === arr[0]) {
+        //         computerChoice = arr[0]
+        //         alert(`It's a tie!`)
+        // } else if (userChoice === arr[0]) {
+        //                 computerChoice = arr[1]
+        //                 alert(`You lose!`)
+        //         } else if (userChoice === arr[0]) {
+        //                         computerChoice = arr[2]
+        //                         alert('You win!')
+        //         } 
+                
+        // if (userChoice === arr[1]) {
+        //         computerChoice = arr[0]
+        //          alert('You win!')
+        // } else if (userChoice === [1]) {
+        //          computerChoice = arr[1]
+        //          alert(`It's a tie!`)
+        // } else if (userChoice === [1]) {
+        //         computerChoice = arr[2]
+        //         alert('You lose!')
+        // } else if (userChoice === [2]) {
+        //         computerChoice = arr[0]
+        //         alert('You lose!')
+        // } else if (userChoice === [2]) {
+        //         computerChoice = arr[1]
+        //         alert('You win!')
+        // } else if (userChoice === [2]) {
+        //         computerChoice = arr[2]
+        //         alert(`It's a tie!`)
+        //         }
+        // }
+        </script>
+</body>
+</html>
